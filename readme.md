@@ -28,7 +28,7 @@ i am the zodiac killer
 
 
 
-$ python multizod.py --alphabets ZAG decencode 25 "I am the zodiac killer"
+$ python multizod.py --alphabets ZAG encode 25 "I am the zodiac killer"
 ك ΜΩ ♎ΤΠ ا♉ΟΥΜΞ ΧΥΨΨΠ♌
 
 
