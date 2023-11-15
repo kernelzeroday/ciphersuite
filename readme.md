@@ -3,7 +3,7 @@
 usage:
 
 ```
-$ python zodiac.py dencode 4 "I am the Zodiac Killer"
+$ python zodiac.py encode 4 "I am the Zodiac Killer"
 M eq xli ♋shmeg Omppiv
 
 
