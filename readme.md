@@ -34,4 +34,18 @@ $ python multizod.py --alphabets ZAG encode 25 "I am the zodiac killer"
 
 $ python multizod.py --alphabets ZAG decode 25 "ك ΜΩ ♎ΤΠ ا♉ΟΥΜΞ ΧΥΨΨΠ♌"
 I am the zodiac killer
+
+
+
+
+
+
+
+$ python megazod.py --alphabets EZSP encode 34 "I am the zodiac killer"
+q ♐∏ ∝∅∀ ∪−♓∇♐♒ ∉∇∋∋∀∘
+
+
+$ python megazod.py --alphabets EZSP decode 34 "q ♐q ♐∏ ∝∅∀ ∪−♓∇♐♒ ∉∇∋∋∀∘"
+I am the zodiac killer
+
 ```
