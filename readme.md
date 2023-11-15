@@ -48,4 +48,8 @@ q ♐∏ ∝∅∀ ∪−♓∇♐♒ ∉∇∋∋∀∘
 $ python megazod.py --alphabets EZSP decode 34 "q ♐q ♐∏ ∝∅∀ ∪−♓∇♐♒ ∉∇∋∋∀∘"
 I am the zodiac killer
 
+
+
+$ python nullfinder.py "Your input string" --filter "characters to filter"
+
 ```
