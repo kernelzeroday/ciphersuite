@@ -22,4 +22,16 @@ $ python greekzodiac.py encode 23 "I am the zodiac killer"
 $ python greekzodiac.py decode 23 "♍ x♑ ε♌♉♍ x♑ ε♌♉ λ♓♈♍xz ♏♍♐♐♉γ"
 i am the zodiac killer
 
+
+
+
+
+
+
+$ python multizod.py --alphabets ZAG decencode 25 "I am the zodiac killer"
+ك ΜΩ ♎ΤΠ ا♉ΟΥΜΞ ΧΥΨΨΠ♌
+
+
+$ python multizod.py --alphabets ZAG decode 25 "ك ΜΩ ♎ΤΠ ا♉ΟΥΜΞ ΧΥΨΨΠ♌"
+I am the zodiac killer
 ```
