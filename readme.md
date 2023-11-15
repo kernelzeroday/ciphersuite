@@ -55,14 +55,14 @@ I am the zodiac killer
 
 
 $ python nullfinder.py --auto-inject -m "I am the zodiac killer"
-Nulls used: fpv
-Null padded string: I am pthve zodifac killer
+Nulls used: 0Fx
+Null padded string: I am txhe zodi0ac kilFler
 
-$ python megazod2.py --nulls fpv --alphabets EZP encode 13 "I am pthve zodifac killer"
-V o♊ p♑xvt ♀♌syfor ♈y♉♉t♏
 
-$ python megazod2.py --nulls fpv --alphabets EZP decode 13 "V o♊ pV o♊ p♑xvt ♀♌syfor ♈y♉♉t♏"
+$ python megazod2.py --nulls 0Fx --alphabets "RU,RE,ASC" encode 13 'I am txhe zodi0ac kilFler'
+Ф &| >x=_ Г:)[0&( {[}F}_.
+
+
+$ python megazod2.py --nulls 0Fx --alphabets "RU,RE,ASC" decode 13 'Ф &| >x=_ Г:)[0&( {[}F}_.'
 I am the zodiac killer
-
-
 ```
