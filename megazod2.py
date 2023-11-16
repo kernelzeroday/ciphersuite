@@ -2,23 +2,42 @@ import argparse
 
 def create_mapping(english_alphabet, selected_alphabets, shift, nulls):
     mapping = {}
+    reverse_mapping = {}
     extended_alphabet = [char for char in selected_alphabets if char not in nulls]
+    collision_warnings = []
 
     if len(extended_alphabet) == 0:
-        return {}, {}  # Return empty mappings if extended_alphabet is empty
+        return {}, {}, []  # Return empty mappings and warnings if extended_alphabet is empty
 
     shift %= len(extended_alphabet)
 
-    # Create mapping for encoding
+    used_cipher_chars = set()
+
+    # Create mapping for encoding, avoiding collision-causing characters
     for i, char in enumerate(english_alphabet):
-        if char not in nulls:
-            shifted_index = (i + shift) % len(extended_alphabet)
-            mapping[char] = extended_alphabet[shifted_index]
+        if char in nulls:
+            continue  # Skip null characters
 
-    # Create reverse mapping for decoding
-    reverse_mapping = {v: k for k, v in mapping.items()}
+        shifted_index = (i + shift) % len(extended_alphabet)
+        cipher_char = extended_alphabet[shifted_index]
 
-    return mapping, reverse_mapping
+        # Add a check to prevent infinite loop
+        attempts = 0
+        while cipher_char in used_cipher_chars and attempts < len(extended_alphabet):
+            shifted_index = (shifted_index + 1) % len(extended_alphabet)
+            cipher_char = extended_alphabet[shifted_index]
+            attempts += 1
+
+        if attempts == len(extended_alphabet):
+            collision_warnings.append((char, cipher_char))
+        else:
+            mapping[char] = cipher_char
+            reverse_mapping[cipher_char] = char
+            used_cipher_chars.add(cipher_char)
+
+    return mapping, reverse_mapping, collision_warnings
+
+
 
 def custom_rot_cipher(input_str, shift, mode, alphabets, alphabets_dict, nulls):
     english_alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
@@ -28,9 +47,10 @@ def custom_rot_cipher(input_str, shift, mode, alphabets, alphabets_dict, nulls):
     if not selected_alphabets:
         raise ValueError("Selected alphabets string is empty. Please check the --alphabets argument.")
 
-    mapping, reverse_mapping = create_mapping(english_alphabet, selected_alphabets, shift, nulls)
+    mapping, reverse_mapping, collision_warnings = create_mapping(english_alphabet, selected_alphabets, shift, nulls)
 
     result = ''
+    possible_results = []
 
     for char in input_str:
         if mode == 'encode':
@@ -41,8 +61,13 @@ def custom_rot_cipher(input_str, shift, mode, alphabets, alphabets_dict, nulls):
         elif mode == 'decode':
             if char not in nulls:
                 result += reverse_mapping.get(char, char)  # Use original char if not in reverse mapping
+                if char in collision_warnings:
+                    possible_results.append([reverse_mapping.get(c, c) for c in input_str])
 
-    return result
+    if possible_results:
+        return possible_results
+    else:
+        return result
 
 def main():
     parser = argparse.ArgumentParser(description='Custom ROT cipher with multiple selectable alphabets for encoding and decoding English text.')
