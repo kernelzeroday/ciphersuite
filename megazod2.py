@@ -202,6 +202,21 @@ def main():
         'HE2': 'אבגדהוזחטיכלמנסעפצקרשתךםןףץ',  # Hebrew Alphabet with Final Forms
         'HE3': 'אבגדהוזחטיכלמנסעפצקרשתךםןףץ׳״',  # Hebrew Alphabet with Final Forms and Punctuation
         'HE4': 'אבגדהוזחטיכלמנסעפצקרשתךםןףץ׳״ׇ',  # Hebrew Alphabet with Final Forms, Punctuation, and Cantillation Marks
+        'PH': '𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕𐤖𐤗𐤘𐤙𐤚𐤛𐤜𐤝𐤞𐤟𐤠𐤡𐤢𐤣𐤤𐤥𐤦𐤧𐤨𐤩𐤪𐤫𐤬𐤭𐤮𐤯𐤰𐤱𐤲𐤳𐤴𐤵𐤶𐤷𐤸𐤹𐤺𐤻𐤼𐤽𐤾𐤿',  # Phoenician Alphabet
+        'R': 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛞᛟᚪᚫᚣᛡᛠ',  # Elder Futhark
+        'R2': 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛞᛟᚪᚫᚣᛡᛠᛤᛥᛦ',  # Elder Futhark (with ᛤᛥᛦ)
+        'R3': 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛞᛟᚪᚫᚣᛡᛠᛤᛥᛦᛧᛨᛩᛪ᛫᛬᛭ᛮᛯ',  # Elder Futhark (with ᛤᛥᛦ and ᛧᛨᛩᛪ᛫᛬᛭ᛮᛯ)
+        'R4': 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛞᛟᚪᚫᚣᛡᛠᛤᛥᛦᛧᛨᛩᛪ᛫᛬᛭ᛮᛯᛰ',  # Elder Futhark (with ᛤᛥᛦ, ᛧᛨᛩᛪ᛫᛬᛭ᛮᛯ, and ᛰ)
+        # obscure alphabets
+        'O1': '⚀⚁⚂⚃⚄⚅',  # Dice
+        'O2': '⚀⚁⚂⚃⚄⚅⚀⚁⚂⚃⚄⚅',  # Dice (doubled)
+        # egypian hieroglyphs
+        'E1': '𓀀𓀁𓀂𓀃𓀄𓀅𓀆𓀇𓀈𓀉𓀊𓀋𓀌𓀍𓀎𓀏𓀐𓀑𓀒𓀓𓀔𓀕𓀖𓀗𓀘𓀙𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀪𓀫𓀬𓀭𓀮𓀯𓀰𓀱𓀲𓀳𓀴𓀵𓀶𓀷𓀸𓀹𓀺𓀻𓀼𓀽𓀾𓀿𓁀𓁁𓁂𓁃𓁄𓁅𓁆𓁇𓁈𓁉𓁊𓁋𓁌𓁍𓁎𓁏𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩𓁪𓁫𓁬𓁭𓁮𓁯𓁰𓁱𓁲𓁳𓁴𓁵𓁶𓁷𓁸𓁹𓁺',
+        # sumerian cuneiform
+        'CUN': '𒀸𒀼𒁋𒂊𒂞𒃶𒄒𒅗𒆳𒇇𒈠𒉌𒊏𒋗𒌁',
+        
+
+
 
 
     }
